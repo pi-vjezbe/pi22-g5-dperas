@@ -6,7 +6,6 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Evaluation_Manager.Repositories
 {
@@ -17,7 +16,9 @@ namespace Evaluation_Manager.Repositories
             string sql = $"SELECT * FROM Teachers WHERE Username = '{username}'";
             return FetchTeacher(sql);
         }
-    public static Teacher GetTeacher(int id)
+
+
+        public static Teacher GetTeacher(int id)
         {
             string sql = $"SELECT * FROM Teachers WHERE Id = {id}";
             return FetchTeacher(sql);
@@ -58,5 +59,6 @@ namespace Evaluation_Manager.Repositories
             };
             return teacher;
         }
+
     }
 }
